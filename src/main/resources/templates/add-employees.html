@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "ISO-8859-1" />
+        <link href = "css/styles.css" rel = "stylesheet"/>
+        <title>Add Employees</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+               $("button").click(function() {
+                  var employeeModel = {
+                     firstName : $("#firstName").val(),
+                     lastName : $("#lastName").val(),
+                     email : $("#email").val()
+                  };
+                  var requestJSON = JSON.stringify(employeeModel);
+                  $.ajax({
+                     type : "POST",
+                     url : "http://localhost:8080/api/employees",
+                     headers : {
+                        "Content-Type" : "application/json"
+                     },
+                     data : requestJSON,
+                     success : function(data) {
+                        alert(data);
+                     },
+                     error : function(data) {
+                     }
+                  });
+               });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h2>POST Employees</h2>
+        <p><a href="http://localhost:8080/">Redirect to Main Page</a></p>
+        <p>First Name: <input type="text" name="firstName" id="firstName"/></p>
+        <p>Last Name: <input type="text" name="lastName" id="lastName"/></p>
+        <p>Email: <input type="text" name="email" id="email"/></p>
+        <p><button>Click here to submit the form</button></p>
+    </body>
+</html>

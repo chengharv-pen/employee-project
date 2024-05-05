@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "ISO-8859-1" />
+        <link href = "css/styles.css" rel = "stylesheet"/>
+        <title>Delete Employees</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+               $("button").click(function() {
+                  var employeeModel = {
+                     firstName : $("#firstName").val(),
+                     lastName : $("#lastName").val(),
+                     email : $("#email").val()
+                  };
+                  var requestJSON = JSON.stringify(employeeModel);
+                  var urlLink = "http://localhost:8080/api/employees/" + $("#id").val();
+                  console.log(urlLink);
+                  $.ajax({
+                     type : "DELETE",
+                     url : urlLink,
+                     headers : {
+                        "Content-Type" : "application/json"
+                     },
+                     data : requestJSON,
+                     success : function(data) {
+                        alert(data);
+                     },
+                     error : function(data) {
+                     }
+                  });
+               });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h2>DELETE Employees</h2>
+        <p><a href="http://localhost:8080/">Redirect to Main Page</a></p>
+        <p>Employee ID: <input type="text" name="id" id="id"/></p>
+        <button>Click here to submit the form</button>
+    </body>
+</html>

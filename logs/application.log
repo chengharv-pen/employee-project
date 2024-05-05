@@ -1,0 +1,3 @@
+2024-05-04T00:20:25.138-04:00  INFO 8448 --- [employee] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-04T00:20:25.154-04:00  INFO 8448 --- [employee] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-04T00:20:25.162-04:00  INFO 8448 --- [employee] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

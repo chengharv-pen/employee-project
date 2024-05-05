@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "ISO-8859-1" />
+        <link href = "css/styles.css" rel = "stylesheet"/>
+        <title>Get Employees</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $.getJSON("http://localhost:8080/api/employees", function(result){
+                  $.each(result, function(key,value) {
+                     var output = {
+                        id : value.id,
+                        firstName : value.firstName,
+                        lastName : value.lastName,
+                        email : value.email
+                     };
+                     var outputPretty = JSON.stringify(output);
+                     $("#employeesJson").append(outputPretty+" ");
+                  });
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>GET Employees</h2>
+        <p><a href="http://localhost:8080/">Redirect to Main Page</a></p>
+        <p>Below are the Employees in the database.</p>
+        <div id="employeesJson"></div>
+    </body>
+</html>
