@@ -1,7 +1,7 @@
 A Spring Boot application that lets its user execute 4 types of API requests, such as POST/GET/PUT/DELETE via either Postman or in a HTML website. 
 The MySQL database at port 3306 will be changed, depending on the API request.
 
-Your IP address in src/main/resources/application.properties can be changed by replacing the text "<YOUR IP ADDRESS>".
+The text "<YOUR IP ADDRESS>" in src/main/resources/application.properties can be changed with your IP address.
 
 Logging and exceptions for the EmployeeController, integration tests and authentication (with OAuth2 and JWT) have also been implemented.
 
