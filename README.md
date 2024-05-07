@@ -5,7 +5,7 @@ The text "YOUR IP ADDRESS" in src/main/resources/application.properties can be c
 
 Logging and exceptions for the EmployeeController, integration tests and authentication (with OAuth2 and JWT) have also been implemented.
 
-If someone were to run this program and wants to execute API requests via HTML, please visit http://localhost:8080/main-page and enter the following details in the popup
+If someone were to run this program and wants to call API requests via HTML, please visit http://localhost:8080/main-page and enter the following details in the popup
 Username: username
 Password: password
 
