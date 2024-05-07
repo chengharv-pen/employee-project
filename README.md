@@ -1,4 +1,4 @@
-A Spring Boot application that lets its user call 4 types of API requests, such as POST/GET/PUT/DELETE via either Postman or in a HTML website. 
+A Spring Boot application that lets its user call 4 types of API requests, such as POST/GET/PUT/DELETE from either Postman or HTML website. 
 The MySQL database at port 3306 will be changed, depending on the API request.
 
 The text "YOUR IP ADDRESS" in src/main/resources/application.properties can be changed with your IP address.
