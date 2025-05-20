@@ -84,7 +84,7 @@ public class SecurityConfig {
         return NimbusJwtDecoder.withPublicKey(rsaKeys.publicKey()).build();
     }
 
-    //Define a JWT Encoder - wtf just happened?
+    //Define a JWT Encoder
     @Bean
     JwtEncoder jwtEncoder() {
         JWK jwk = new RSAKey.Builder(rsaKeys.publicKey()).privateKey(rsaKeys.privateKey()).build();
